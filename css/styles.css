@@ -1,0 +1,130 @@
+/* Mackenzie Horton
+september 16,2025
+styles.css */
+
+/* 
+  CSS Reset
+  Purpose: Remove default browser styles to ensure consistent styling across all browsers.
+*/
+
+/* Mackenzie Horton
+   September 17, 2025
+   styles.css
+*/
+
+body, header, nav, main, footer, h1, h2, h3, p, ul, li, div, img, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Font family with fallback */
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* Gradient background */
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+header h1 {
+    color: #ff1493; /* dark pink */
+    font-size: 2em;
+    margin-bottom: 0.25em;
+}
+
+header h2 {
+    font-size: 1.25em;
+    margin: 0.25em 0 1em 0;
+}
+
+/* Navigation Styles */
+nav {
+    width: 70%;
+    float: right;
+    margin: 5em 3em 0 0;
+}
+
+nav ul {
+    list-style-type: none; /* removes bullet points */
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.75em;
+}
+
+nav li a {
+    display: block;
+    color: #ff1493;
+    text-decoration: none; /* remove underline */
+    padding: 0.5em 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav li a:hover {
+    color: #fff;
+}
+
+/* Main Content Styles */
+main {
+    clear: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2%;
+    font-size: 1.25em;
+    text-align: center;
+    color: #000;
+}
+
+/* Footer Styles */
+footer {
+    clear: both;
+    text-align: center;
+    padding: 1em 0;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+footer a {
+    color: #ff1493;
+    text-decoration: none; /* remove underline */
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%; /* responsive */
+    height: auto;
+    display: block; /* remove inline spacing issues */
+}
+
+/* Example ID selector */
+#contact {
+    text-align: center;
+    margin-top: 2em;
+}
+
+/* Example Class selector */
+.action {
+    font-size: 1.35em;
+    color: #ff1493;
+    font-weight: bold;
+}
+
+/* Extra styling for high contrast links */
+.external-link {
+    color: #ff1493;
+    font-weight: bold;
+    text-decoration: none;
+}
