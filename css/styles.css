@@ -128,3 +128,29 @@ img {
     font-weight: bold;
     text-decoration: none;
 }
+.projects {
+    display: flex;
+    flex-wrap: wrap;        /* lets items move to the next line if needed */
+    justify-content: center; /* center all the projects evenly */
+    gap: 20px;              /* spacing between projects */
+    margin-top: 20px;
+}
+
+.project {
+    padding: 10px 20px;
+    background-color: #f0f0f0; /* light background (card look) */
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.project a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.project:hover {
+    background-color: #ffb6c1;
+    transform: scale(1.05);
+}
