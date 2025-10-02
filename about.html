@@ -13,6 +13,47 @@ Date: September 2, 2025
 		<link rel="stylesheet" href="css/styles.css">
    </head>
    <body>
+       <!-- Background music -->
+    <audio id="background-music" loop autoplay>
+        <source src="media/moonlightcoffee.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Mute/unmute button -->
+    <button onclick="toggleMute()" style="position: fixed; top: 10px; right: 10px; z-index: 100;">
+        Mute/Unmute Music
+    </button>
+
+    <script>
+        const bgMusic = document.getElementById("background-music");
+
+        // Attempt autoplay if blocked
+        document.addEventListener("click", function startMusic() {
+            if (bgMusic.paused) {
+                bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
+            }
+            document.removeEventListener("click", startMusic);
+        });
+
+        // Restore music time if available
+        window.addEventListener("load", () => {
+            const savedTime = sessionStorage.getItem("musicTime");
+            if (savedTime) {
+                bgMusic.currentTime = parseFloat(savedTime);
+                bgMusic.play().catch(() => {});
+            }
+        });
+
+        // Save music time before leaving page
+        window.addEventListener("beforeunload", () => {
+            sessionStorage.setItem("musicTime", bgMusic.currentTime);
+        });
+
+        // Toggle mute
+        function toggleMute() {
+            bgMusic.muted = !bgMusic.muted;
+        }
+    </script>
 		<p></p>
 	<header>
 	<h1 style="color:#C71585;">
