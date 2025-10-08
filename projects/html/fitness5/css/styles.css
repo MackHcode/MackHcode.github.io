@@ -1,0 +1,157 @@
+/*
+Mackenzie Horton
+September 16,2025
+*/
+
+/* css reset*/
+body,header,nav,main,h1,div,img,ul{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+
+/* styles for body and  images*/
+body{
+		background-color: #000;
+		
+}
+/* styles for header*/
+header{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	background-color: #000;
+	height: 190px;
+	
+}
+header img{
+	margin:0 auto;
+
+}
+
+nav{
+	padding: 1%;
+	margin-bottom:1%;
+
+		
+}
+main{
+clear: left;
+	
+	background-color: #fff;
+	padding: 2%;
+	font-size: 1.25em;
+	font-family: 'Roboto Slab', serif;
+	}
+	.tel-link{
+		background-color: #404040;
+		padding: 2%;
+		margin: 0 auto;
+		width: 80%;
+		text-align: center;
+		border-radius: 5px;
+	}
+	.tel-link a{
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.5em;
+		display: block;
+	}
+	.hours{
+		margin-bottom: 10%;
+	}
+nav ul{
+	list-style-type:none;
+	margin:0;
+	text-align:center;
+		
+}
+nav li{
+	font-size: 1.5em;
+	font-family: Verdana,Arial,sans-serif;
+	border-top: 1px solid #fff;
+		
+}
+nav li:first-child{
+	border-top: none;
+}
+nav li a{
+	display:block;
+	color:#fff; /*white,rbg,(255,255,255)*/
+	text-align:center;
+	padding:.5em 1em;
+	text-decoration:none;
+		
+	
+}
+/* show mobile class and hide tablet-dekctoop class*/
+.mobile{
+	display:block
+}
+.tablet-desktop{
+	display: none;
+}
+img{
+	max-width:100%;
+	display:block;
+}
+/* Styl3 rules for mobile viewportengi
+/*styles fof footer*/
+footer p{
+	font-size: .75em;
+	text-align:center;
+	color: #fff;
+padding: 0 1em; }
+
+footer p a{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+	#weights, #cardio, #training{ /*id names*/
+	
+	margin: 0 2%;
+}
+.round{
+	border-radius: 8px;
+}
+
+#contact{
+	text-align: center;
+}
+
+#contact a{
+	color:#660;
+	text-decoration: none;
+}
+.action{/*classes begin with a period */
+font-size:1.35em;
+color:#660;
+font-weight:bold;}
+.external-link{
+	color:#660;
+	font-weight:bold;
+	text-decoration:none;
+}
+.map{
+	border:8px solid #000;
+	width: 95%;
+	height:50%;
+}
+/*#exercises{
+	clear:left;
+	border-top: 1px soild #000;
+	border-bottom: 1px solid #000;
+	background-color:#f2f2f2;
+	padding: 1% 2%;
+}
+#exercises dt{
+	font-weight:bold;
+	
+}
+#exercises dd{
+	padding: .5% 1% 2% 0;
+}
+	*/
