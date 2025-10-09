@@ -1,114 +1,101 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mackenzie Horton</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-<!-- 
-Name: Mackenzie Horton
-File: template.html
-Date: September 2, 2025
- -->
+<body>
+  <!-- Background music -->
+  <audio id="background-music" loop autoplay>
+    <source src="media/moonlightcoffee.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
+  <!-- Mute/unmute button -->
+  <button onclick="toggleMute()" style="position: fixed; top: 10px; right: 10px; z-index: 100;">
+    Mute/Unmute Music
+  </button>
 
-  <html lang="en">
-   <head>
-		<title>Mackenzie Horton</title>
-		<meta charset="utf-8">
-				<link rel="stylesheet" href="css/styles.css">
-   </head>
-   <body>
-	   <!-- Background music -->
-    <audio id="background-music" loop autoplay>
-        <source src="media/moonlightcoffee.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+  <script>
+    const bgMusic = document.getElementById("background-music");
 
-    <!-- Mute/unmute button -->
-    <button onclick="toggleMute()" style="position: fixed; top: 10px; right: 10px; z-index: 100;">
-        Mute/Unmute Music
-    </button>
+    document.addEventListener("click", function startMusic() {
+      if (bgMusic.paused) {
+        bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
+      }
+      document.removeEventListener("click", startMusic);
+    });
 
-    <script>
-        const bgMusic = document.getElementById("background-music");
+    window.addEventListener("load", () => {
+      const savedTime = sessionStorage.getItem("musicTime");
+      if (savedTime) {
+        bgMusic.currentTime = parseFloat(savedTime);
+        bgMusic.play().catch(() => {});
+      }
+    });
 
-        // Attempt autoplay if blocked
-        document.addEventListener("click", function startMusic() {
-            if (bgMusic.paused) {
-                bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
-            }
-            document.removeEventListener("click", startMusic);
-        });
+    window.addEventListener("beforeunload", () => {
+      sessionStorage.setItem("musicTime", bgMusic.currentTime);
+    });
 
-        // Restore music time if available
-        window.addEventListener("load", () => {
-            const savedTime = sessionStorage.getItem("musicTime");
-            if (savedTime) {
-                bgMusic.currentTime = parseFloat(savedTime);
-                bgMusic.play().catch(() => {});
-            }
-        });
+    function toggleMute() {
+      bgMusic.muted = !bgMusic.muted;
+    }
+  </script>
 
-        // Save music time before leaving page
-        window.addEventListener("beforeunload", () => {
-            sessionStorage.setItem("musicTime", bgMusic.currentTime);
-        });
+  <header>
+    <h1 class="tablet-desktop">Mackenzie Horton</h1>
+    <h1 class="mobile" style="font-size:1.75em;">Mackenzie Horton</h1>
+    <h2 class="tablet-desktop" style="color:#C71585;">Here are some of my projects.</h2>
+    <h2 class="mobile" style="color:#C71585; font-size:1em;">My Projects</h2>
+  </header>
 
-        // Toggle mute
-        function toggleMute() {
-            bgMusic.muted = !bgMusic.muted;
-        }
-    </script>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
 
-		<p></p>
-	<header>
-	<h1 style="color:white;">  
-	Mackenzie Horton</h1>
-	<h2 style="color:#C71585;">
-	Here are some of my projects. </h2>
-    </header>
-   
-   <nav>
-   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Me</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="projects.html">Projects</a></li>
-  </ul>
-   </nav>
-   <!-- Use the main area to add the main content of the webpage-->
-   <main>
-   <div class="projects">
-   <div class="project">
-   <a href="projects/html/fitness2/index.html">Forward Chapter 2</a>
-   </div>
-   
-   <div class="project">
-   <a href="projects/html/fitness3/index.html">Forward Chapter 3</a>
-   </div>
-   
-   <div class="project">
-   <a href="projects/html/fitness4/index.html">Forward Chapter 4</a>
-   </div>
-   
-   <div class="project">
-   <a href="projects/js/chapter1/example/js01.html">Version 1</a>
-   <div class="project">
-   <a href="projects/js/chapter1/example/js01b.html">Version 2</a>
-   </div>
-   </div>
-   <div class="project">
-   <a href="projects/js/chapter1/project02/project01-02_txt.html">Project2</a>
-   <div class="project">
-   <a href="projects/js/chapter1/project04/project01-04_txt.html">Project4</a>
-   </div>
-   
-   </div>
-   </main>
-   
-   <footer>
-   </footer>
-   
-   
-		
-   </body>
-   
-   
-   
+  <main>
+     <!-- Mobile layout -->
+    <div class="mobile">
+      <p>Viewing on Mobile</p>
+      <div class="projects">
+        <div class="project"><a href="projects/html/fitness2/index.html">Forward Chapter 2</a></div>
+        <div class="project"><a href="projects/html/fitness3/index.html">Forward Chapter 3</a></div>
+        <div class="project"><a href="projects/html/fitness4/index.html">Forward Chapter 4</a></div>
+        <div class="project"><a href="projects/html/fitness5/index.html">Forward Chapter 5</a></div>
+        <div class="project"><a href="projects/html/fitness6/index.html">Forward Chapter 6</a></div>
+        <div class="project"><a href="projects/js/chapter1/example/js01.html">Version 1</a></div>
+        <div class="project"><a href="projects/js/chapter1/example/js01b.html">Version 2</a></div>
+        <div class="project"><a href="projects/js/chapter1/project02/project01-02_txt.html">Project 2</a></div>
+        <div class="project"><a href="projects/js/chapter1/project04/project01-04_txt.html">Project 4</a></div>
+      </div>
+    </div>
+
+    <!-- Tablet/Desktop layout -->
+    <div class="tablet-desktop">
+      <p>Viewing on Tablet/Desktop</p>
+      <div class="projects">
+        <div class="project"><a href="projects/html/fitness2/index.html">Forward Chapter 2</a></div>
+        <div class="project"><a href="projects/html/fitness3/index.html">Forward Chapter 3</a></div>
+        <div class="project"><a href="projects/html/fitness4/index.html">Forward Chapter 4</a></div>
+        <div class="project"><a href="projects/html/fitness5/index.html">Forward Chapter 5</a></div>
+        <div class="project"><a href="projects/html/fitness6/index.html">Forward Chapter 6</a></div>
+        <div class="project"><a href="projects/js/chapter1/example/js01.html">Version 1</a></div>
+        <div class="project"><a href="projects/js/chapter1/example/js01b.html">Version 2</a></div>
+        <div class="project"><a href="projects/js/chapter1/project02/project01-02_txt.html">Project 2</a></div>
+        <div class="project"><a href="projects/js/chapter1/project04/project01-04_txt.html">Project 4</a></div>
+      </div>
+    </div>
+</main>
+  <footer>
+    <p><a href="mailto:mackenzie.horton@stu.cvccworks.edu">Macks Email</a></p>
+  </footer>
+</body>
 </html>

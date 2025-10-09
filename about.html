@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-
-<!-- 
-Name: Mackenzie Horton
-File: template.html
-Date: September 2, 2025
- -->
-
 <html lang="en">
-   <head>
-		<title>Mackenzie Horton</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css">
-   </head>
-   <body>
-       <!-- Background music -->
+<head>
+    <title>Mackenzie Horton</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Background music -->
     <audio id="background-music" loop autoplay>
         <source src="media/moonlightcoffee.mp3" type="audio/mp3">
         Your browser does not support the audio element.
@@ -27,7 +20,6 @@ Date: September 2, 2025
     <script>
         const bgMusic = document.getElementById("background-music");
 
-        // Attempt autoplay if blocked
         document.addEventListener("click", function startMusic() {
             if (bgMusic.paused) {
                 bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
@@ -35,7 +27,6 @@ Date: September 2, 2025
             document.removeEventListener("click", startMusic);
         });
 
-        // Restore music time if available
         window.addEventListener("load", () => {
             const savedTime = sessionStorage.getItem("musicTime");
             if (savedTime) {
@@ -44,67 +35,58 @@ Date: September 2, 2025
             }
         });
 
-        // Save music time before leaving page
         window.addEventListener("beforeunload", () => {
             sessionStorage.setItem("musicTime", bgMusic.currentTime);
         });
 
-        // Toggle mute
         function toggleMute() {
             bgMusic.muted = !bgMusic.muted;
         }
     </script>
-		<p></p>
-	<header>
-	<h1 style="color:#C71585;">
-	Mackenzie Horton</h1>
-	<h2 style="color:white;">
-	I’m a beginner Java programmer who enjoys building creative and functional programs. I bring ideas to life by writing code and experimenting with new projects. 
-	</h2>
-	<a href="index.html"><img src="images/Mackenzie.jpg"
-	alt="Personal Picture" ></a>
+
+    <header>
+        <h1 class="tablet-desktop" style="color:#C71585;">Mackenzie Horton</h1>
+        <h1 class="mobile" style="color:#C71585; font-size: 1.75em;">Mackenzie Horton</h1>
+
+        <h2 class="tablet-desktop" style="color:white;">
+            I’m a beginner Java programmer who enjoys building creative and functional programs. I bring ideas to life by writing code and experimenting with new projects.
+        </h2>
+        <h2 class="mobile" style="color:white; font-size: 1em;">
+            I’m a beginner Java programmer who enjoys building creative projects.
+        </h2>
+
+        <a href="index.html"><img src="images/Mackenzie.jpg" alt="Personal Picture"></a>
     </header>
-   
-   <nav>
-   <p>
-	<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Me</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="projects.html">Projects</a></li>
-  </ul>
-   </nav>
-   <!-- Use the main area to add the main content of the webpage-->
-   <main>
-		<div id="about">
-			<h1 style="color:#C71585;">
-			About Me
-			</h1>
-			<p style="color:#C71585;font-size: 24px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
-			Outside of programming, I enjoy relaxing by playing The Sims 4, keeping up with football and many more hobbies. These hobbies give me a balance between creativity, strategy, and fun. .
-			</p>
-			
-			<ul>
-				<li style="color: #C71585; font-size: 20px;">Sims 4</li>
-  <li style="color: #C71585; font-size: 20px;">Football</li>
-  <li style="color: #C71585; font-size: 20px;">Flag Football</li>
-  <li style="color: #C71585; font-size: 20px;">Running Track</li>
-  <li style="color: #C71585; font-size: 20px;">Watching TV Shows</li>
-				
-				
-			</ul>
-		</div>
-   </main>
-   
-   <footer>
-   <p><a href="mailto:mackenzie.horton@stu.cvccworks.edu">
-	Macks Email</a></p>
-   </footer>
-   
-   
-		
-   </body>
-   
-   
-   
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="about">
+            <h1 style="color:#C71585;">About Me</h1>
+            <p style="color:#C71585;font-size: 24px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+                Outside of programming, I enjoy relaxing by playing The Sims 4, keeping up with football and many more hobbies. These hobbies give me a balance between creativity, strategy, and fun.
+            </p>
+
+            <ul>
+                <li style="color: #C71585; font-size: 20px;">Sims 4</li>
+                <li style="color: #C71585; font-size: 20px;">Football</li>
+                <li style="color: #C71585; font-size: 20px;">Flag Football</li>
+                <li style="color: #C71585; font-size: 20px;">Running Track</li>
+                <li style="color: #C71585; font-size: 20px;">Watching TV Shows</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="mailto:mackenzie.horton@stu.cvccworks.edu">Macks Email</a></p>
+    </footer>
+</body>
 </html>
+
