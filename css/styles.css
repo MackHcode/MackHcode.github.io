@@ -154,3 +154,138 @@ img {
     background-color: #ffb6c1;
     transform: scale(1.05);
 }
+/* tablet media query*/
+/* ========================
+   Media Query: Tablet Viewport
+======================== */
+@media screen and (min-width:630px), print {
+    /* Show tablet-desktop content, hide mobile content */
+    .tablet-desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+
+    /* Header adjustments for tablet */
+    header {
+        width: 35%;
+        float: left;
+        text-align: center;
+        padding-bottom: 2%;
+    }
+
+    /* Nav adjustments for tablet */
+    nav {
+        width: 60%;
+        float: right;
+        margin-top: 5em;
+        margin-right: 2em;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav li {
+        display: inline-block;
+        border-top: none;
+        border-right: 1px solid #fff;
+        margin-left: 10px;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+    /* Projects: 2 columns using float and width */
+    .project {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 20px;
+    }
+
+    .project:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    /* Main adjustments for tablet */
+    main ul {
+        margin: 0 0 4% 10%;
+    }
+
+    /* Map adjustments if used */
+    .map {
+        width: 600px;
+        height: 450px;
+    }
+}
+
+/* ========================
+   Media Query: Desktop Viewport
+======================== */
+@media screen and (min-width:1015px), print {
+    /* Show tablet-desktop content, hide mobile content */
+    .tablet-desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+
+    /* Header adjustments for desktop */
+    header {
+        width: 25%;
+        float: left;
+        padding-bottom: 0;
+    }
+
+    /* Nav adjustments for desktop */
+    nav {
+        width: 70%;
+        float: right;
+        margin-top: 5em;
+        margin-right: 3em;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+    }
+
+    /* Hover effect for nav links */
+    nav li a:hover {
+        color: #fff;
+        background-color: #ff1493;
+        border-radius: 5px;
+    }
+
+    /* Projects: 3 columns using float and width */
+    .project {
+        float: left;
+        width: 31%;
+        margin-right: 3.5%;
+        margin-bottom: 20px;
+    }
+
+    .project:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    /* Main adjustments for desktop */
+    main h1 {
+        font-size: 1.8em;
+    }
+}
