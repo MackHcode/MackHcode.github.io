@@ -45,37 +45,45 @@ header h2 {
 
 /* Navigation Styles */
 nav {
-    width: 70%;
+    width: auto; /* let it size to content */
     float: right;
     margin: 5em 3em 0 0;
-     background-color: rgba(255, 255, 255, 0.7); /* slight transparency */
-    border-radius: 0 0 12px 12px; /* optional rounded bottom corners */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* subtle shadow */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     padding: 0.5em;
 }
 
+/* Nav list */
 nav ul {
-    list-style-type: none; /* removes bullet points */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     text-align: right;
 }
 
+/* Nav items */
 nav li {
     display: inline-block;
     margin-left: 10px;
     font-size: 1.75em;
 }
 
+/* Nav links */
 nav li a {
-    display: block;
+    display: inline-block; /* was block, now just around text */
+    padding: 0.3em 0.8em;  /* smaller “bubble” */
     color: #ff1493;
-    text-decoration: none; /* remove underline */
-    padding: 0.5em 1em;
+    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    text-align: center;
 }
 
+/* Hover effect */
 nav li a:hover {
     color: #fff;
+    background-color: #ff1493; /* optional highlight */
+    border-radius: 5px;         /* optional rounded corners */
 }
 
 
@@ -135,7 +143,7 @@ img {
 }
 /*Project Grid*/
 
-projects {
+.projects {
     display: grid; /* use grid for layout */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -324,6 +332,8 @@ projects {
     .map {
         width: 600px;
         height: 450px;
+        display: block;
+        margin: 0 auto;
     }
     .btn {
         padding: 0.7em 1.4em; /* slightly larger than default */
