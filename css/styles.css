@@ -45,14 +45,14 @@ header h2 {
 
 /* Navigation Styles */
 nav {
-    width: auto;
-    float: right;
-    margin: 5em 3em 0 0;
+     width: fit-content; /* shrink just to the links */
+    margin: 2em auto 0 auto; /* center horizontally */
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 0 0 12px 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     padding: 0.5em;
-    text-align: center; /* center items inside nav container */
+    text-align: center; /* make links inside align nicely */
+    float: none; /* remove float */
 }
 
 nav ul {
