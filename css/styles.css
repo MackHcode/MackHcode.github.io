@@ -45,45 +45,40 @@ header h2 {
 
 /* Navigation Styles */
 nav {
-    width: auto; /* let it size to content */
+    width: auto;
     float: right;
     margin: 5em 3em 0 0;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 0 0 12px 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     padding: 0.5em;
+    text-align: center; /* center items inside nav container */
 }
 
-/* Nav list */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    text-align: right;
 }
 
-/* Nav items */
 nav li {
     display: inline-block;
-    margin-left: 10px;
-    font-size: 1.75em;
+    margin: 0 5px; /* horizontal spacing between bubbles */
 }
 
-/* Nav links */
 nav li a {
-    display: inline-block; /* was block, now just around text */
-    padding: 0.3em 0.8em;  /* smaller “bubble” */
+    display: inline-block;
+    padding: 0.5em 1em; /* adjust size of bubble */
     color: #ff1493;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
     text-align: center;
 }
 
-/* Hover effect */
 nav li a:hover {
     color: #fff;
-    background-color: #ff1493; /* optional highlight */
-    border-radius: 5px;         /* optional rounded corners */
+    background-color: #ff1493;
 }
 
 
@@ -245,6 +240,7 @@ img {
 }
 .highlight-title {
     color: #C71585;
+    text-align: center;
 }
 
 .highlight-text {
@@ -252,11 +248,13 @@ img {
     font-size: 1.5em;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-align: center;
 }
 
 .highlight-list {
     color: #C71585;
     font-size: 1.25em;
+    text-align: center;
 }
 #contact {        /* For Contact page section styling */
     padding: 2rem;
