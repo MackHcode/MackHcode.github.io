@@ -68,7 +68,7 @@ nav li {
 
 nav li a {
     display: inline-block;
-    padding: 0.5em 1em; /* adjust size of bubble */
+    padding: 0.1em 1em; /* adjust size of bubble */
     color: #ff1493;
     text-decoration: none;
     font-weight: bold;
