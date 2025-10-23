@@ -13,8 +13,8 @@
     </audio>
 
     <!-- Mute/unmute button -->
-    <button onclick="toggleMute()" style="position: fixed; top: 10px; right: 10px; z-index: 100;">
-        Mute/Unmute Music
+    <button class="btn" onclick="toggleMute()">
+    Mute/Unmute Music
     </button>
 
     <script>
@@ -45,17 +45,18 @@
     </script>
 
     <header>
-        <h1 class="tablet-desktop" style="color:#C71585;">Mackenzie Horton</h1>
-        <h1 class="mobile" style="color:#C71585; font-size: 1.75em;">Mackenzie Horton</h1>
+    <h1 class="tablet-desktop highlight-title">Mackenzie Horton</h1>
+    <h1 class="mobile highlight-title" style="font-size: 1.75em;">Mackenzie Horton</h1>
 
-        <h2 class="tablet-desktop" style="color:white;">
-            I’m a beginner Java programmer who enjoys building creative and functional programs. I bring ideas to life by writing code and experimenting with new projects.
-        </h2>
-        <h2 class="mobile" style="color:white; font-size: 1em;">
-            I’m a beginner Java programmer who enjoys building creative projects.
-        </h2>
+    <h2 class="tablet-desktop highlight-text">
+        Im a beginner Java programmer who enjoys building creative and functional programs. 
+        I bring ideas to life by writing code and experimenting with new projects.
+    </h2>
+    <h2 class="mobile highlight-text" style="font-size: 1em;">
+        Im a beginner Java programmer who enjoys building creative projects.
+    </h2>
 
-        <a href="index.html"><img src="images/Mackenzie.jpg" alt="Personal Picture"></a>
+    <a href="index.html"><img src="images/Mackenzie.jpg" alt="Personal Picture" class="shadow-box"></a>
     </header>
 
     <nav>
@@ -68,10 +69,10 @@
     </nav>
 
     <main>
-        <div id="contact">
-            <h2 style="color:#C71585;">Ready to get started? Contact us today.</h2>
-            <h4>Email me: <a href="mailto:mackenzie.horton@stu.cvccworks.edu">Macks Email</a></h4>
-            <h4>Visit me at: 8001 Brecksville Rd, Brecksville, OH 44141</h4>
+        <div id="contact" class="shadow-box">
+        <h2 class="highlight-title">Ready to get started? Contact us today.</h2>
+        <h4 class="highlight-text">Email me: <a href="mailto:mackenzie.horton@stu.cvccworks.edu">Macks Email</a></h4>
+        <h4 class="highlight-text">Visit me at: 8001 Brecksville Rd, Brecksville, OH 44141</h4>
 
             <!-- Mobile map -->
             <iframe class="mobile" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23962.094622220884!2d-81.62412750000001!3d41.3466624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830e6dd7da6a0c5%3A0xe21fba97e75c809!2sCuyahoga%20Valley%20Career%20Center!5e0!3m2!1sen!2sus!4v1757436524447!5m2!1sen!2sus" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

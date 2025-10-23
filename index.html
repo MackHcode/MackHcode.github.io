@@ -19,8 +19,8 @@
     </audio>
 
     <!-- Mute/unmute button -->
-    <button onclick="toggleMute()" style="position: fixed; top: 10px; right: 10px; z-index: 100;">
-        Mute/Unmute Music
+    <button class="btn" onclick="toggleMute()">
+    Mute/Unmute Music
     </button>
 
     <script>
@@ -62,12 +62,14 @@
     </script>
 
     <header>
-        <h1 class="tablet-desktop">Mackenzie Horton</h1>
-        <h1 class="mobile" style="font-size:1.75em;">Mackenzie Horton</h1>
-        <h2 class="tablet-desktop">Student Java Programmer</h2>
-        <h2 class="mobile" style="font-size:1em;">Student Java Programmer</h2>
-        <a href="index.html"><img src="images/Mackenzie.jpg" alt="Personal Picture"></a>
-    </header>
+    <h1 class="tablet-desktop highlight-title">Mackenzie Horton</h1>
+    <h1 class="mobile highlight-title" style="font-size:1.75em;">Mackenzie Horton</h1>
+
+    <h2 class="tablet-desktop highlight-text">Student Java Programmer</h2>
+    <h2 class="mobile highlight-text" style="font-size:1em;">Student Java Programmer</h2>
+
+    <a href="index.html"><img src="images/Mackenzie.jpg" alt="Personal Picture" class="shadow-box"></a>
+</header>
 
     <nav>
         <ul>
@@ -79,21 +81,19 @@
     </nav>
 
     <main>
-        <p style="color:#ff1493;font-size: 24px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
-            I’m a beginner Java programmer who enjoys building creative and functional programs. 
-            I bring ideas to life by writing code and experimenting with new projects &#9733;
-        </p>
+        <section class="intro-grid">
+    <figure class="profile-card shadow-box">
+      <img src="images/Mackenzie.jpg" alt="Mackenzie Horton portrait">
+      <figcaption>Student Java Programmer</figcaption>
+    </figure>
 
-        <!-- Visible only on mobile -->
-        <div class="mobile">
-            <p style="color:#C71585;"></p>
-        </div>
+    <article class="intro-text">
+      <p>Im a beginner Java programmer who enjoys building creative and functional programs. 
+      I bring ideas to life by writing code and experimenting with new projects &#9733;</p>
+    </article>
+  </section>
+</main>
 
-        <!-- Visible on tablet and desktop -->
-        <div class="tablet-desktop">
-            <p style="color:#C71585;"></p>
-        </div>
-    </main>
 
     <footer>
         <p><a href="mailto:mackenzie.horton@stu.cvccworks.edu">Macks Email</a></p>
