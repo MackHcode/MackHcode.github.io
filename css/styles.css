@@ -262,6 +262,121 @@ img {
 }
 
 
+/* Media Query: Mobile Viewport */
+@media screen and (max-width: 629px) {
+    /* Hide tablet-desktop elements */
+    .tablet-desktop {
+        display: none;
+    }
+
+    /* Show mobile-specific elements */
+    .mobile {
+        display: block;
+    }
+
+    /* Header adjustments for small screens */
+    header {
+        text-align: center;
+        padding: 1em;
+    }
+
+    header h1 {
+        font-size: 1.85em; /* smaller so it doesn’t overlap */
+        margin-bottom: 0.3em;
+    }
+
+    header h2 {
+        font-size: 1em;
+        line-height: 1.4;
+        margin: 0 1em;
+    }
+    header h1.mobile {
+    font-size: 1.75em;
+}
+
+    header h2.mobile {
+    font-size: 1em;
+    line-height: 1.4; /* keep text readable on small screens */
+}
+
+
+    header img {
+        width: 60%;
+        height: auto;
+        border-radius: 10px;
+        margin: 1em auto;
+        display: block;
+    }
+
+    /* Navigation layout for mobile */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 0.3em 0;
+    }
+
+    nav li a {
+        display: block;
+        background-color: #ffb6c1;
+        color: #000;
+        padding: 0.5em;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    nav li a:hover {
+        background-color: #ff69b4;
+        color: white;
+    }
+
+    /* Main content adjustments */
+    main {
+        padding: 1em;
+        text-align: center;
+    }
+
+    .highlight-title, .highlight-text {
+        text-align: center;
+        margin: 0.5em auto;
+        display: block;
+    }
+    .projects {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .project {
+        width: 100%;
+        margin: 0.5em 0;
+        text-align: center;
+    }
+
+    /* Contact map centered */
+    iframe {
+        width: 90%;
+        height: auto;
+        margin: 1em auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 1em;
+        font-size: 0.9em;
+    }
+}
+
+
 
 /* tablet media query*/
 
