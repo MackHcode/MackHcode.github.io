@@ -523,89 +523,67 @@ img {
         padding: 0.8em 1.6em; 
     }
      
-/* TABLE STYLING – Added for Project */
-
-
-table {
-    width: 85%;
+/* Technical Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
     margin: 2em auto;
-    border-collapse: collapse;
-    background: linear-gradient(to right, #ffe4f1, #f8e8ff);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 10px;
-    overflow: hidden;
-    font-size: 1em;
 }
 
-th, td {
-    border: 1px solid #e5c0e5;
-    padding: 1em;
+.skill-card {
+    background: linear-gradient(to bottom, #ffe4f1, #f8e8ff);
+    border-radius: 12px;
+    padding: 1.5em;
     text-align: center;
-    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-th {
-    background-color: #ff1493;
-    color: #fff;
+.skill-card h3 {
+    color: #ff1493;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+.skill-card p {
+    color: #C71585;
     font-weight: bold;
-    letter-spacing: 0.5px;
 }
 
-tr:nth-child(even) {
-    background-color: rgba(255, 182, 193, 0.2);
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
-tr:hover {
-    background-color: rgba(255, 182, 193, 0.4);
-    transition: background 0.3s;
+/* Mobile List */
+.skill-list {
+    display: none; /* hide on larger screens */
+    list-style-type: none;
+    margin: 1em auto;
+    padding: 0;
+    width: 90%;
 }
 
-/* Table alternate for MOBILE view: Hide table and use list */
+.skill-list li {
+    background: linear-gradient(to right, #ffe4f1, #f8e8ff);
+    padding: 0.8em;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+    text-align: center;
+    color: #C71585;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 629px) {
-    table {
-        display: none; /* hide table on small screens */
+    .skills-grid {
+        display: none; /* hide grid on mobile */
     }
-
-    .mobile-table-list {
+    .skill-list {
         display: block;
-        width: 90%;
-        margin: 1em auto;
-        background: linear-gradient(to right, #ffe4f1, #f8e8ff);
-        padding: 1em 1.5em;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        color: #333;
-    }
-
-    .mobile-table-list h3 {
-        color: #ff1493;
-        text-align: center;
-        margin-bottom: 0.75em;
-    }
-
-    .mobile-table-list ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .mobile-table-list li {
-        padding: 0.7em 0;
-        border-bottom: 1px solid #f0bcd6;
-        text-align: center;
-    }
-
-    .mobile-table-list li:last-child {
-        border-bottom: none;
     }
 }
 
-/* Tablet + Desktop table adjustments */
-@media screen and (min-width: 630px) {
-    table {
-        display: table; /* show table again */
-    }
-}
 
 
 /* FORM STYLING – Added for Project */
