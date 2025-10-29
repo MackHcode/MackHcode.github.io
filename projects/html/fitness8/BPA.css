@@ -1,0 +1,74 @@
+/* Mackenzie Horton- Fundementals of Web Design 
+   
+*/
+
+html, body {
+    margin: 0;                 
+    background-color: #000080; 
+}
+
+body {
+    color: #000;                       
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;                     
+}
+
+
+.wrapper {
+    width: 1000px;             
+    padding: 5px;              
+    background-color: #FFF; 
+    margin: 0 auto;            
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-family: Verdana, sans-serif; 
+    font-size: 24pt;                  
+    color: #000080;                  
+    font-weight: normal;              
+    text-align: center;               
+}
+
+/
+h2 {
+    font-family: Arial, sans-serif;   
+    font-size: 14pt;                 
+    color: #F00;                  
+    font-weight: normal;             
+    text-align: center;
+}
+
+
+hr {
+    height: 12px;              
+    background-color: #000080; 
+    border: none;              
+    margin: 1em 0;
+    display: block;
+}
+
+
+.img-left {
+    float: left;
+    padding: 15px;
+    margin: 0 15px 15px 0;
+}
+
+.img-right {
+    float: right;
+    padding: 15px;
+    margin: 0 0 15px 15px;
+}
+
+
+.wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+	
