@@ -88,6 +88,76 @@
                 <li style="color: #C71585; font-size: 20px;">Watching TV Shows</li>
             </ul>
         </div>
+
+        <section id="skills" class="shadow-box">
+            <h2 class="highlight-title">My Technical Skills</h2>
+
+            <!-- Table for tablet and desktop -->
+            <table class="tablet-desktop">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Proficiency</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Java Programming</td>
+                        <td>Intermediate</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td>HTML & CSS</td>
+                        <td>Intermediate</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Beginner</td>
+                        <td>6 months</td>
+                    </tr>
+                    <tr>
+                        <td>Git & GitHub</td>
+                        <td>Intermediate</td>
+                        <td>1 year</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- List for mobile view -->
+            <ul class="mobile skill-list">
+                <li><strong>Java Programming:</strong> Intermediate, 1 year</li>
+                <li><strong>HTML & CSS:</strong> Intermediate, 1 year</li>
+                <li><strong>JavaScript:</strong> Beginner, 6 months</li>
+                <li><strong>Git & GitHub:</strong> Intermediate, 1 year</li>
+            </ul>
+        </section>
+
+        <!-- ===== New Form Section ===== -->
+        <section id="feedback" class="shadow-box">
+            <h2 class="highlight-title">Send Me Feedback</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="interest">Favorite Programming Language:</label>
+                <select id="interest" name="interest">
+                    <option value="java">Java</option>
+                    <option value="htmlcss">HTML/CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </main>
 
     <footer>
