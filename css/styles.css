@@ -524,65 +524,61 @@ img {
     }
      
 /* Technical Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+/* Technical Skills Table */
+.skills-table {
+    width: 90%;
     margin: 2em auto;
-}
-
-.skill-card {
-    background: linear-gradient(to bottom, #ffe4f1, #f8e8ff);
-    border-radius: 12px;
-    padding: 1.5em;
+    border-collapse: collapse;
+    font-size: 1em;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.skill-card h3 {
-    color: #ff1493;
-    font-size: 1.25em;
-    margin-bottom: 0.5em;
-}
-
-.skill-card p {
-    color: #C71585;
-    font-weight: bold;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-/* Mobile List */
-.skill-list {
-    display: none; /* hide on larger screens */
-    list-style-type: none;
-    margin: 1em auto;
-    padding: 0;
-    width: 90%;
-}
-
-.skill-list li {
-    background: linear-gradient(to right, #ffe4f1, #f8e8ff);
-    padding: 0.8em;
-    margin-bottom: 0.5em;
     border-radius: 10px;
-    text-align: center;
-    color: #C71585;
+    overflow: hidden;
+}
+
+.skills-table th, .skills-table td {
+    padding: 1em 1.2em;
+    border: 1px solid #e5c0e5;
+}
+
+.skills-table th {
+    background-color: #ff1493;
+    color: #fff;
     font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 1.1em;
+}
+
+.skills-table tbody tr:nth-child(odd) {
+    background-color: rgba(255, 182, 193, 0.2);
+}
+
+.skills-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 182, 193, 0.1);
+}
+
+.skills-table tbody tr:hover {
+    background-color: rgba(255, 182, 193, 0.4);
+    transition: background 0.3s;
+}
+
+/* Make table responsive on smaller tablets and mobile */
+@media screen and (max-width: 900px) {
+    .skills-table th, .skills-table td {
+        padding: 0.8em;
+        font-size: 0.95em;
+    }
 }
 
 @media screen and (max-width: 629px) {
-    .skills-grid {
-        display: none; /* hide grid on mobile */
+    .skills-table {
+        display: none;
     }
     .skill-list {
         display: block;
     }
 }
+
 
 
 
