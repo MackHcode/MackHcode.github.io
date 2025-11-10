@@ -28,16 +28,16 @@ function showGames(){
         let gameInfo;
         switch(gameResults[i]){
             case "W":
-                gameInfo ="<p class'win'>";
+                gameInfo ="<p class='win'>";
                 break;
-                case "O":
-                gameInfo ="<p class'lose'>";
+                case "L":
+                gameInfo ="<p class='lose'>";
                 break;
                 case "P":
-                gameInfo ="<p class'postponed'>";
+                gameInfo ="<p class='postponed'>";
                 break;
                 case "S":
-                gameInfo ="<p class'suspended'>";
+                gameInfo ="<p class='suspended'>";
                 break;
         }
         if(gameLocations[i]== "h"){
