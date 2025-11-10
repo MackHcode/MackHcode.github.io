@@ -49,7 +49,7 @@ for (let i = 0; i < reviewers.length; i++) {
 
       reviewCode += "<caption>"+reviewTitles[i]+"</caption>";
       reviewCode += "<tr><th>By</th><td>"+reviewers[i]+"</td></tr>";
-      reviewCode += "<tr><th>Review Date</th><td>"+reviewDates[i]+"</td></tr>";
+      reviewCode += "<tr><th>Review Date</th><td>"+starImages(stars[i])+"</td></tr>";
       reviewCode += "<tr><td colspan='2'>"+reviews[i]+"</td></tr>";
       reviewCode += "</table>";
 
