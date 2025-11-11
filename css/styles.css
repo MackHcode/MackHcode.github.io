@@ -285,7 +285,81 @@ img {
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
+/* Artist Button*/
+#favorite-artists button {
+    margin-top: 0.5em;
+    padding: 0.4em 0.8em;
+    background-color: #ff1493;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
+#favorite-artists button:hover {
+    background-color: #ff85c1;
+}
+/* Favorite Shows Section */
+#favorite-shows {
+    margin-top: 2em;
+}
+
+#favorite-shows .shows-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+#favorite-shows .show-card {
+    width: 250px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 0.5em;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Individual image glow colors */
+#favorite-shows .show1 img {
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(235, 102, 240, 0.979); /* pinkish glow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#favorite-shows .show1:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px  rgba(235, 102, 240, 0.979);
+
+#favorite-shows .show2 img {
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(47, 173, 252, 0.7); /* light blue glow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#favorite-shows .show2:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(135, 206, 250, 1);
+}
+
+#favorite-shows .show3 img {
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(245, 248, 34, 0.7); /* light green glow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#favorite-shows .show3:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+#favorite-shows .show-card figcaption {
+    margin-top: 0.5em;
+    font-weight: bold;
+    color: #C71585;
+}
 /* 
    Intro Grid Layout for Index Page */
 .intro-grid {
