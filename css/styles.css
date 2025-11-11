@@ -175,6 +175,116 @@ img {
 .shadow-box:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
+/* ===== Favorite Games Section ===== */
+#favorite-games .games-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+}
+
+#favorite-games .game-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 0.5rem;
+    text-align: center;
+    max-width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#favorite-games .game-card figcaption {
+    margin-top: 0.5em;
+    font-size: 0.95em;
+    color: #C71585;
+}
+
+#favorite-games .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Image Glow using CSS Variable for color */
+#favorite-games .game-card img {
+    width: 100%;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    --glow-color: rgba(255, 20, 147, 0.7); /* default pink glow */
+    box-shadow: 0 0 15px var(--glow-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#favorite-games .game-card img:hover {
+    box-shadow: 0 0 25px var(--glow-color);
+    transform: scale(1.05);
+}
+
+/* Specific Glow Colors for each game */
+#favorite-games .red-glow img {
+    --glow-color: rgba(255, 0, 0, 0.7);
+}
+#favorite-games .red-glow img:hover {
+    --glow-color: rgba(255, 0, 0, 1);
+}
+
+#favorite-games .blue-glow img {
+    --glow-color: rgba(0, 183, 255);
+}
+#favorite-games .blue-glow img:hover {
+    --glow-color: rgba(0, 183, 255);
+}
+
+#favorite-games .green-glow img {
+    --glow-color: rgba(9, 138, 9, 0.7);
+}
+#favorite-games .green-glow img:hover {
+    --glow-color:  rgba(9, 138, 9, 0.7);
+}
+/* ===== Favorite Artists Section ===== */
+#favorite-artists .artists-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* space between cards */
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+}
+
+#favorite-artists .artist-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 0.5rem;
+    text-align: center;
+    max-width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#favorite-artists .artist-card figcaption {
+    margin-top: 0.5em;
+    font-size: 0.95em;
+    color: #C71585;
+}
+
+/* Slight White Glow on Images */
+#favorite-artists .artist-card img {
+    width: 100%;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#favorite-artists .artist-card img:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+/* Optional hover effect for the card itself */
+#favorite-artists .artist-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
 
 /* 
    Intro Grid Layout for Index Page */
