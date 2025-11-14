@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mackenzie Horton</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Hidden background music -->
+    <audio id="background-music" loop>
+        <source src="media/moonlightcoffee.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Hidden click sound -->
+    <audio id="click-sound" loop>
+        <source src="media/clicksound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Mute/unmute button -->
+    <button class="btn" onclick="toggleMute()">
+    Mute/Unmute Music
+    </button>
+
+    <script>
+        const bgMusic = document.getElementById("background-music");
+        const clickSound = document.getElementById("click-sound");
+
+        document.addEventListener("click", function startMusic() {
+            if (bgMusic.paused) {
+                bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
+            }
+            document.removeEventListener("click", startMusic);
+        });
+
+        window.addEventListener("load", () => {
+            const savedTime = sessionStorage.getItem("musicTime");
+            if (savedTime) {
+                bgMusic.currentTime = parseFloat(savedTime);
+                bgMusic.play().catch(() => {});
+            }
+        });
+
+        window.addEventListener("beforeunload", () => {
+            sessionStorage.setItem("musicTime", bgMusic.currentTime);
+        });
+
+        function toggleMute() {
+            bgMusic.muted = !bgMusic.muted;
+        }
+
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const href = link.getAttribute("href");
+                clickSound.currentTime = 0;
+                clickSound.play().catch(err => console.log("Click sound blocked:", err));
+                setTimeout(() => { window.location.href = href; }, 150);
+            });
+        });
+    </script>
+
+    <header>
+    <!-- Desktop/Tablet -->
+    <h1 class="tablet-desktop highlight-title">Mackenzie Horton</h1>
+    <h2 class="tablet-desktop highlight-text">Student Java Programmer</h2>
+
+    <!-- Mobile -->
+    <h1 class="mobile highlight-title">Mackenzie Horton</h1>
+    <h2 class="mobile highlight-text">Student Java Programmer</h2>
+
+    <a href="index.html">
+        <img src="images/Mackenzie.jpg" alt="Personal Picture" class="shadow-box">
+    </a>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+             <li><a href="hobby.html">Favorites</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hobby-section">
+         <h2>Flag Football</h2>
+    <p><em>Flag football is a team sport similar to traditional American football, but instead of tackling, players remove a flag from the ball carrier to end a play.</em></p>
+
+    <!-- Offense -->
+    <article class="hobby-subsection">
+        <h3>Offense</h3>
+        <p>The offensive teams goal is to advance the ball and score points. Positions include:</p>
+         <figure class="position-image">
+            <img src="images/offensive.png" alt="Offensive positions diagram">
+            <figcaption>Offensive positions in flag football</figcaption>
+        </figure>
+        <ul>
+            <li><strong>Quarterback (QB):</strong> Leads the offense, passes or hands off the ball.</li>
+            <li><strong>Right/Left Tackle:</strong> Block defenders to protect the QB.</li>
+            <li><strong>Right/Left Guard:</strong> Support blocking and create lanes for running plays.</li>
+            <li><strong>Center:</strong> Snaps the ball to the QB and blocks defensive players.</li>
+            <li><strong>Wide Receivers (2-3):</strong> Catch passes and advance the ball.</li>
+            <li><strong>Running Back:</strong> Runs with the ball and receives handoffs.</li>
+            <li><strong>Halfback:</strong> Another running option, often agile and fast.</li>
+            <li><strong>Tight End:</strong> Blocks and can also receive passes.</li>
+        </ul>
+    </article>
+
+    <!-- Defense -->
+    <article class="hobby-subsection">
+        <h3>Defense</h3>
+        <p>The defensive teams goal is to stop the offense from scoring. Positions include:</p>
+          <figure class="position-image">
+            <img src="images/defensive.png" alt="Defensive positions diagram">
+            <figcaption>Defensive positions in flag football</figcaption>
+        </figure>
+        <ul>
+            <li><strong>Defensive Linemen:</strong> Stop running plays and pressure the QB.</li>
+            <li><strong>Linebackers:</strong> Support both run defense and pass coverage.</li>
+            <li><strong>Cornerbacks:</strong> Cover wide receivers and defend against passes.</li>
+            <li><strong>Safeties:</strong> Last-line coverage and support against long passes.</li>
+        </ul>
+    </article>
+
+    <!-- Plays / Routes -->
+    <article class="hobby-subsection">
+        <h3>Plays & Routes</h3>
+        <p>Plays are planned strategies the offense uses to advance the ball, and routes are the paths receivers take. Examples:</p>
+         <!-- Plays Images -->
+        <figure class="play-image">
+            <img src="images/slant.jpg" alt="Slant route">
+            <figcaption>Slant route</figcaption>
+        </figure>
+
+        <figure class="play-image">
+            <img src="images/post.png" alt="Post route">
+            <figcaption>Post route</figcaption>
+        </figure>
+        <figure class="play-image">
+            <img src="images/out.png" alt="Out Route ">
+            <figcaption>Out route</figcaption>
+        </figure>
+
+
+        <ul>
+            <li><strong>Running Play:</strong> QB hands off the ball to a running back.</li>
+            <li><strong>Passing Play:</strong> QB throws the ball to a receiver on a designated route.</li>
+            <li><strong>Common Routes:</strong> Slant, Out, Post, Fly.</li>
+        </ul>
+    </article>
+
+    <!-- Tutorial -->
+    <article class="hobby-subsection">
+        <h3>How to Play</h3>
+        <ol>
+            <li>Divide teams into offense and defense.</li>
+            <li>Set up a field with end zones and flags on each player.</li>
+            <li>Offense starts with a snap; QB decides to pass or run.</li>
+            <li>Defense tries to remove the flag from the ball carrier.</li>
+            <li>Repeat plays until time runs out or a set number of points is reached.</li>
+            <li>The team with the most points wins.</li>
+        </ol>
+        <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/G-916j8b5c0" 
+            title="Flag Football Tutorial" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    </article>
+</section>
+</main>
+
+
+    <footer>
+        <p><a href="mailto:mackenzie.horton@stu.cvccworks.edu">Macks Email</a></p>
+    </footer>
+
+</body>
+</html>
