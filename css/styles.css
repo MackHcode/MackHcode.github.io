@@ -502,6 +502,15 @@ img {
     border: 2px solid #ff1493;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+/* Center defense image specifically */
+.position-image.defense {
+    text-align: center;
+}
+
+.position-image.defense img {
+    display: block;
+    margin: 0 auto;
+}
 
 figcaption {
     font-style: italic;
