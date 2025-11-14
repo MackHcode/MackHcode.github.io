@@ -489,24 +489,17 @@ img {
     margin-bottom: 0.5em;
 }
 
-/* ===== Images for Positions & Plays ===== */
-.position-image, .play-image {
+/*Plays / Routes Images */
+.play-image {
     text-align: center;
     margin: 1.5em 0;
 }
 
-.position-image img, .play-image img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #ff1493;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
 .play-image img {
-    max-width: 250px;        /* smaller width for plays images */
+    max-width: 200px;        /* smaller width */
     height: auto;
-    display: block;
-    margin: 1em auto;        /* centers image */
+    display: block;           /* ensures it centers properly */
+    margin: 1em auto;         /* centers image horizontally */
     border-radius: 10px;
     border: 2px solid #ff1493;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -514,16 +507,17 @@ img {
 
 .play-image figcaption {
     text-align: center;
-    color: #C71585;
+    color: #C71585;      /* pink caption */
     font-weight: bold;
     margin-top: 0.5em;
+    font-size: 0.95em;
 }
 /* Center defense image specifically */
-.position-image.defense {
+.position-image.defensive {
     text-align: center;
 }
 
-.position-image.defense img {
+.position-image.defensive img {
     display: block;
     margin: 0 auto;
 }
