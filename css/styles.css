@@ -329,10 +329,11 @@ img {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#favorite-shows .show1:hover img {
+#favorite-shows .show1:hover img 
+{
     transform: scale(1.05);
     box-shadow: 0 0 20px  rgba(235, 102, 240, 0.979);
-
+}
 #favorite-shows .show2 img {
     border-radius: 10px;
     box-shadow: 0 0 12px rgba(47, 173, 252, 0.7); /* light blue glow */
@@ -341,18 +342,18 @@ img {
 
 #favorite-shows .show2:hover img {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(135, 206, 250, 1);
+    box-shadow: 0 0 20px rgb(55, 167, 236);
 }
 
 #favorite-shows .show3 img {
     border-radius: 10px;
-    box-shadow: 0 0 12px rgba(245, 248, 34, 0.7); /* light green glow */
+    box-shadow: 0 0 12px rgba(245, 248, 34, 0.7); /* light yellow glow */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #favorite-shows .show3:hover img {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(240, 211, 45);
 }
 
 #favorite-shows .show-card figcaption {
@@ -558,6 +559,29 @@ img {
         padding: 1em;
         font-size: 0.9em;
     }
+     /* FAVORITES — MOBILE LAYOUT */
+    .games-gallery,
+    .artists-gallery,
+    .shows-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .game-card,
+    .artist-card,
+    .show-card {
+        width: 100%;
+    }
+
+    .game-card img,
+    .artist-card img,
+    .show-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
 }
 
 
@@ -639,20 +663,48 @@ img {
     .btn {
         padding: 0.7em 1.4em; /* slightly larger than default */
     }
+    /* FAVORITES TABLET LAYOUT */
+    .games-gallery,
+    .artists-gallery,
+    .shows-gallery {
+        display: flex;         /* make cards sit side by side */
+        flex-wrap: wrap;       /* wrap to new row if needed */
+        justify-content: center; /* center the cards */
+        gap: 25px;             /* spacing between cards */
+    }
+
+    .game-card,
+    .artist-card,
+    .show-card {
+        width: 45%; /* 2 cards per row */
+    }
+
+    .game-card img,
+    .artist-card img,
+    .show-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
 }
 
 /*  Media Query: Desktop Viewport */
-@media screen and (min-width:1015px), print {
+@media screen and (min-width:1015px), print 
+{
     /* Show tablet-desktop content, hide mobile content */
-    .tablet-desktop {
+    .tablet-desktop 
+    {
         display: block;
     }
-    .mobile {
+    .mobile 
+    {
         display: none;
     }
 
     /* Header adjustments for desktop */
-    header {
+    header 
+    {
         width: 25%;
         float: left;
         padding-bottom: 0;
@@ -666,57 +718,88 @@ img {
         margin-right: 3em;
     }
 
-    nav ul {
+    nav ul 
+    {
         text-align: center;
     }
 
-    nav li {
+    nav li 
+    {
         border: none;
         padding: 0 auto;
         width: 20%;
     }
 
-    nav li a {
+    nav li a
+     {
         padding: 0.5em 1em;
     }
 
     /* Hover effect for nav links */
-    nav li a:hover {
+    nav li a:hover 
+    {
         color: #fff;
         background-color: #ff1493;
         border-radius: 5px;
     }
+    /* FAVORITES DESKTOP LAYOUT */
+    .games-gallery,
+    .artists-gallery,
+    .shows-gallery {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .game-card,
+    .artist-card,
+    .show-card {
+        width: 30%; /* 3 per row */
+    }
+
+    /* FORM: Desktop adjustments */
+    form {
+        width: 60%;
+    }
+
+
 
     /* Projects: 3 columns using float and width */
-    .project {
+    .project 
+    {
         float: left;
         width: 31%;
         margin-right: 3.5%;
         margin-bottom: 20px;
     }
 
-    .project:nth-child(3n) {
+    .project:nth-child(3n) 
+    {
         margin-right: 0;
     }
 
     /* Main adjustments for desktop */
-    main h1 {
+    main h1 
+    {
         font-size: 1.8em;
     }
-    .btn {
+    .btn 
+    {
         padding: 0.8em 1.6em; 
     }
      
 /* Technical Skills Grid */
 /* Technical Skills Grid */
-.skills-grid {
+.skills-grid 
+{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin: 2em auto;
 }
 
-.skill-card {
+.skill-card 
+{
     background: linear-gradient(to bottom, #ffe4f1, #f8e8ff);
     border-radius: 12px;
     padding: 1.5em;
@@ -725,24 +808,28 @@ img {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.skill-card h3 {
+.skill-card h3 
+{
     color: #ff1493;
     font-size: 1.25em;
     margin-bottom: 0.5em;
 }
 
-.skill-card p {
+.skill-card p 
+{
     color: #C71585;
     font-weight: bold;
 }
 
-.skill-card:hover {
+.skill-card:hover 
+{
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
 /* Mobile List */
-.skill-list {
+.skill-list
+ {
     display: none; /* hide on larger screens */
     list-style-type: none;
     margin: 1em auto;
@@ -750,7 +837,8 @@ img {
     width: 90%;
 }
 
-.skill-list li {
+.skill-list li 
+{
     background: linear-gradient(to right, #ffe4f1, #f8e8ff);
     padding: 0.8em;
     margin-bottom: 0.5em;
@@ -760,7 +848,10 @@ img {
     font-weight: bold;
 }
 
-@media screen and (max-width: 629px) {
+
+
+@media screen and (max-width: 629px) 
+{
     .skills-grid {
         display: none; /* hide grid on mobile */
     }
@@ -768,6 +859,7 @@ img {
         display: block;
     }
 }
+
 
 
 
@@ -846,8 +938,10 @@ form input[type="submit"]:hover {
 }
 
 /* FORM: Tablet and Desktop */
-@media screen and (min-width: 630px) {
-    form {
+@media screen and (min-width: 630px) 
+{
+    form 
+    {
         width: 60%;
     }
 }
