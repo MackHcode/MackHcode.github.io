@@ -446,6 +446,109 @@ img {
     padding: 2rem;
 }
 
+/* ===== Hobby Page Section ===== */
+.hobby-section {
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+     color: #C71585; /* Make all text inside pink */
+}
+
+/* Hobby Section Title */
+.hobby-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #C71585;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Subsection Titles */
+.hobby-subsection h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #ff1493;
+    padding-bottom: 0.25em;
+}
+
+/* Paragraphs & Lists */
+.hobby-subsection p, 
+.hobby-subsection ul, 
+.hobby-subsection ol {
+    line-height: 1.6;
+    margin: 0.5em 0;
+    color: #C71585; /* Pink text */
+}
+
+.hobby-subsection li {
+    margin-bottom: 0.5em;
+}
+
+/* ===== Images for Positions & Plays ===== */
+.position-image, .play-image {
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.position-image img, .play-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ff1493;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+figcaption {
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5em;
+}
+
+/* ===== Video Container ===== */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 1.5em 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ===== Responsive Hobby Section ===== */
+@media screen and (max-width: 768px) {
+    .hobby-section {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    .hobby-section h2 {
+        font-size: 1.75em;
+    }
+
+    .hobby-subsection h3 {
+        font-size: 1.25em;
+    }
+
+    .position-image img, .play-image img {
+        border-width: 1px;
+    }
+}
+
+
 
 /* Media Query: Mobile Viewport */
 @media screen and (max-width: 629px) {
