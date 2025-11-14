@@ -496,11 +496,27 @@ img {
 }
 
 .position-image img, .play-image img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 10px;
     border: 2px solid #ff1493;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.play-image img {
+    max-width: 250px;        /* smaller width for plays images */
+    height: auto;
+    display: block;
+    margin: 1em auto;        /* centers image */
+    border-radius: 10px;
+    border: 2px solid #ff1493;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.play-image figcaption {
+    text-align: center;
+    color: #C71585;
+    font-weight: bold;
+    margin-top: 0.5em;
 }
 /* Center defense image specifically */
 .position-image.defense {
