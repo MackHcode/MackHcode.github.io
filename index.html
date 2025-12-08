@@ -59,6 +59,9 @@
                 setTimeout(() => { window.location.href = href; }, 150);
             });
         });
+        function hamburger() {
+    document.querySelector("nav").classList.toggle("open");
+}
     </script>
 
     <header>
@@ -73,6 +76,9 @@
     <a href="index.html">
         <img src="images/Mackenzie.jpg" alt="Personal Picture" class="shadow-box">
     </a>
+    <a class="menu-icon mobile" onclick="hamburger()">
+    <div>&#9776;</div>
+</a>
 </header>
 
     <nav>
@@ -82,7 +88,7 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="favorites.html">Favorites</a></li>
-             <li><a href="hobby.html">Favorites</a></li>
+             <li><a href="hobby.html">Hobby</a></li>
         </ul>
     </nav>
 
