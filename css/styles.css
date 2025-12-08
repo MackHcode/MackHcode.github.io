@@ -745,7 +745,11 @@ figcaption {
         display: block;
         margin: 0.5em 0;
     }
-
+    /* Hide mobile header text when menu is open */
+header.menu-open .mobile.highlight-title,
+header.menu-open .mobile.highlight-text {
+    display: none;
+}
 }
 
 
