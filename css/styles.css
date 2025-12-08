@@ -45,6 +45,10 @@ header h2 {
 
 /* Navigation Styles */
 nav {
+      display: flex;                
+    justify-content: center;      
+    align-items: center;          
+
     width: fit-content; /* shrink just to the links */
     margin: 2em auto 0 auto; /* center horizontally */
     background-color: rgba(255, 255, 255, 0.7);
@@ -56,6 +60,8 @@ nav {
 }
 
 nav ul {
+    display: flex;     
+    gap: 20px;         
     list-style: none;
     margin: 0;
     padding: 0;
@@ -702,6 +708,37 @@ figcaption {
         width: 100%;
         height: auto;
         border-radius: 12px;
+    }
+     /* Show hamburger icon only on mobile */
+    .menu-icon {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        margin: 0.5em auto;
+        text-align: center;
+        color: #ff1493;
+    }
+
+    /* Hide normal nav by default on mobile */
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    /* Nav becomes visible when JS adds .open */
+    nav.open {
+        display: block;
+    }
+
+    /* Mobile nav becomes vertical */
+    nav ul {
+        display: block;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 0.5em 0;
     }
 
 }
