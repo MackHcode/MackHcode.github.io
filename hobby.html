@@ -58,7 +58,12 @@
                 clickSound.play().catch(err => console.log("Click sound blocked:", err));
                 setTimeout(() => { window.location.href = href; }, 150);
             });
+
         });
+        function hamburger() {
+    document.querySelector("nav").classList.toggle("open");
+    document.querySelector(".menu-icon").classList.toggle("active");
+}
     </script>
 
     <header>
