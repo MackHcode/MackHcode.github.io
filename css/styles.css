@@ -718,6 +718,10 @@ figcaption {
         text-align: center;
         color: #ff1493;
     }
+    .menu-icon.active div {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
 
     /* Hide normal nav by default on mobile */
     nav {
