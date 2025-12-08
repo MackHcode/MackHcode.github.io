@@ -59,10 +59,16 @@
                 setTimeout(() => { window.location.href = href; }, 150);
             });
         });
-        function hamburger() {
-    document.querySelector("nav").classList.toggle("open");
-     document.querySelector(".menu-icon").classList.toggle("active");
+       function hamburger() {
+    const nav = document.querySelector("nav");
+    const menuIcon = document.querySelector(".menu-icon");
+    const mobileTitle = document.querySelector("header");
+
+    nav.classList.toggle("open");
+    menuIcon.classList.toggle("active");
+    mobileTitle.classList.toggle("menu-open"); // NEW: toggle a class on header
 }
+
     </script>
 
     <header>
