@@ -62,7 +62,7 @@
        function hamburger() {
     const nav = document.querySelector("nav");
     const menuIcon = document.querySelector(".menu-icon");
-    
+     const mobileTitle = document.querySelector("header");
 
     nav.classList.toggle("open");
     menuIcon.classList.toggle("active");
@@ -71,22 +71,23 @@
 
     </script>
 
-    <header>
+    <header class="tablet-desktop">
     <!-- Desktop/Tablet -->
     <h1 class="tablet-desktop highlight-title">Mackenzie Horton</h1>
     <h2 class="tablet-desktop highlight-text">Student Java Programmer</h2>
 
-    <!-- Mobile -->
-    <h1 class="mobile highlight-title">Mackenzie Horton</h1>
-    <h2 class="mobile highlight-text">Student Java Programmer</h2>
-
+    
     <a href="index.html">
         <img src="images/Mack.jpg" alt="Personal Picture" class="shadow-box">
-    </a>
+   
+</header>
+ <!-- Mobile -->
+    <h1 class="mobile highlight-title">Mack</h1>
+    <h2 class="mobile highlight-text">Student Java Programmer</h2>
+
     <a class="menu-icon mobile" onclick="hamburger()">
     <div>&#9776;</div>
 </a>
-</header>
 
     <nav>
         <ul>
