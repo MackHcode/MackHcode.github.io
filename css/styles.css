@@ -179,7 +179,7 @@ img {
 
 /* Optional hover: stronger shadow (static, no movement) */
 .shadow-box:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 20px rgba(187, 13, 164, 0.25);
 }
 /* ===== Favorite Games Section ===== */
 #favorite-games .games-gallery {
@@ -745,9 +745,34 @@ figcaption {
         display: block;
         margin: 0.5em 0;
     }
-    body.menu-open header .mobile {
-    display: none;
+    body.menu-open header .mobile{
+        display: none;
+    }
+
+    .skill-card 
+{
+    background: linear-gradient(to bottom, #ffe4f1, #f8e8ff);
+    border-radius: 12px;
+    padding: 1.5em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.skill-card h3 
+{
+    color: #ff1493;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+.skill-card p 
+{
+    color: #C71585;
+    font-weight: bold;
+}
+
+    
 }
 
 
