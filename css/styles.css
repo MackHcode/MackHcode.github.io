@@ -788,6 +788,15 @@ figcaption {
     .mobile {
         display: none;
     }
+    /* .tablet-desktop 
+    {
+        display: block;
+    }
+    .mobile 
+    {
+        display: none;
+    }
+*/
 
     /* Header adjustments for tablet */
     header {
@@ -877,6 +886,29 @@ figcaption {
         height: auto;
         border-radius: 12px;
     }
+    .skill-card 
+{
+    background: linear-gradient(to bottom, #ffe4f1, #f8e8ff);
+    border-radius: 12px;
+    padding: 1.5em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card h3 
+{
+    color: #ff1493;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+.skill-card p 
+{
+    color: #C71585;
+    font-weight: bold;
+}
+
 
 }
 
@@ -884,7 +916,7 @@ figcaption {
 @media screen and (min-width:1015px), print 
 {
     /* Show tablet-desktop content, hide mobile content */
-    .tablet-desktop 
+   /* .tablet-desktop 
     {
         display: block;
     }
@@ -892,7 +924,7 @@ figcaption {
     {
         display: none;
     }
-
+*/
     /* Header adjustments for desktop */
     header 
     {
@@ -917,7 +949,7 @@ figcaption {
     nav li 
     {
         border: none;
-        padding: 0 auto;
+        padding: 0;
         width: 20%;
     }
 
@@ -1135,5 +1167,31 @@ form input[type="submit"]:hover {
     {
         width: 60%;
     }
+}
+/*Footer*/
+.site-footer {
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+.site-footer a {
+    text-decoration: none;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social img {
+    width: 28px;
+    height: auto;
+}
+
+.social img:hover {
+    opacity: 0.7;
 }
 }
