@@ -36,11 +36,12 @@ function zeroTheRegister() {
 // Function to run the cash register
 function runTheRegister() {
    zeroTheRegister();
-   
-   let changeValue = cashBox.value - billBox.value;  // calculate the change 
+   let cash = Number(cashBox.value);
+   let bill = Number(billBox.value);
+   let changeValue = cash - bill;  // calculate the change 
 
    try {
-      if (!(billBox.value <= cashBox.value))
+      if (!(bill <= cash))
          throw "Cash amount doesnt cover the bill";
             changeBox.value = formatCurrency(changeValue);
             calcChange(changeValue);
@@ -114,4 +115,5 @@ function determineCoin(cashValue, currencyUnit) {
  // Function to display a numeric value as a text string in the format ##.## 
  function formatCurrency(value) {
     return value.toFixed(2);
+
  }
