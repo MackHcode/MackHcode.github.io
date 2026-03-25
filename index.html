@@ -99,6 +99,45 @@
              <li><a href="hobby.html">Hobby</a></li>
         </ul>
     </nav>
+    <!-- Graduation Countdown -->
+<div class="countdown-wrapper">
+  <p class="countdown-label">Graduating May 26, 2026</p>
+  <div class="countdown-boxes">
+    <div class="countdown-box">
+      <span id="cd-days" class="countdown-num">--</span>
+      <span class="countdown-unit">days</span>
+    </div>
+    <div class="countdown-box">
+      <span id="cd-hours" class="countdown-num">--</span>
+      <span class="countdown-unit">hours</span>
+    </div>
+    <div class="countdown-box">
+      <span id="cd-mins" class="countdown-num">--</span>
+      <span class="countdown-unit">minutes</span>
+    </div>
+    <div class="countdown-box">
+      <span id="cd-secs" class="countdown-num">--</span>
+      <span class="countdown-unit">seconds</span>
+    </div>
+  </div>
+</div>
+<script>
+  const gradDate = new Date("May 26, 2026 00:00:00").getTime();
+  function tick() {
+    const now = new Date().getTime();
+    const diff = gradDate - now;
+    if (diff <= 0) {
+      ["cd-days","cd-hours","cd-mins","cd-secs"].forEach(id => document.getElementById(id).textContent = "0");
+      return;
+    }
+    document.getElementById("cd-days").textContent = Math.floor(diff / (1000*60*60*24));
+    document.getElementById("cd-hours").textContent = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    document.getElementById("cd-mins").textContent = Math.floor((diff % (1000*60*60)) / (1000*60));
+    document.getElementById("cd-secs").textContent = Math.floor((diff % (1000*60)) / 1000);
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
 
     <main>
         <section class="intro-grid">
