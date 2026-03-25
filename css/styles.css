@@ -1194,4 +1194,55 @@ form input[type="submit"]:hover {
 .social img:hover {
     opacity: 0.7;
 }
+/* Graduation Countdown */
+.countdown-wrapper {
+    clear: both;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    background: #fff0f5;
+    border: 0.5px solid #f4c0d1;
+    border-radius: 12px;
+    margin: 1.5rem auto;
+    max-width: 500px;
+}
+
+.countdown-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+.countdown-box {
+    background: #fbeaf0;
+    border: 0.5px solid #ed93b1;
+    border-radius: 10px;
+    padding: 0.75rem 1.1rem;
+    min-width: 70px;
+}
+
+.countdown-num {
+    font-size: 32px;
+    font-weight: 500;
+    color: #72243e;
+    display: block;
+    line-height: 1;
+}
+
+.countdown-unit {
+    font-size: 11px;
+    color: #993556;
+    margin-top: 4px;
+    display: block;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.countdown-label {
+    font-size: 14px;
+    color: #993556;
+    margin: 0 0 0.75rem;
+    letter-spacing: 0.04em;
+}
 }
